@@ -1,4 +1,7 @@
 # gulp-html-css-js-base64 #
+### 安装方法
+    
+    npm install gulp-html-css-js-base64
 ### 基础功能
 将CSS文件中的图片url转为base64.
     
