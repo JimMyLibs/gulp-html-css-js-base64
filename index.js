@@ -23,6 +23,7 @@ function toBase64(options) {
         var images = content.match(rule);
         // var currentPath = __dirname + '../../../' + baseDir;
         var currentPath = path.dirname(file.path);// Jim修改于20171023：原方法在部分PC报路径错误，新方法参考gulp-base64
+        var fileName = path.basename(file.path);// Jim修改于20171023：原方法在部分PC报路径错误，新方法参考gulp-base64
         images.forEach(function(item,index) {
             imageURL = item.replace(/\(|\)|\'/g, '');
             imageURL = imageURL.replace(/^url/g, '');
@@ -30,10 +31,11 @@ function toBase64(options) {
             var filepath = fs.realpathSync(route);
             var extname = path.extname(imageURL).slice(1);
             var imageContent = new Buffer(fs.readFileSync(filepath)).toString('base64');
+            var allowTrans = imageContent.length<opts.maxImageSize || !opts.maxImageSize;// Jim修改于20190129：判断图片小于maxImageSize或未定义或登录0的才转base64
             if(opts.debug){// Jim修改于20171023：添加面向用户的debug
-                console.log('图片'+index+':'+item,'转后='+(imageContent.length/1024).toFixed(2)+'kb','转码:',(imageContent.length<opts.maxImageSize?'√':'×'));
-            }
-            if(imageContent.length<opts.maxImageSize){// Jim修改于20171023：判断图片小于maxImageSize的才转base64
+                console.log(fileName,'第'+index+1+'张图片:'+item,'转后='+(imageContent.length/1024).toFixed(2)+'kb','转码:',(allowTrans?'√':'×'));
+            }            
+            if(allowTrans){// Jim修改于20171023：判断图片小于maxImageSize的才转base64
                 if (initFileType === 'css') {
                     content = content.replace(item, 'url(\'data:image/' + extname.toLowerCase() + ';base64,' + imageContent + '\')');
                 }

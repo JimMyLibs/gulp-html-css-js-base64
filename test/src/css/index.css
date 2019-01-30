@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+}
+#js_img,.css_img{
+    margin: 0 auto;
+    width:200px;
+    height: 200px;
+}
+.css_img{
+    background: url(../img/china.png) no-repeat center center / 100%;
+}

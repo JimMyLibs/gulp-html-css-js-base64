@@ -1,53 +1,36 @@
 {
-  "_from": "gulp-html-css-js-base64@^0.0.1",
-  "_id": "gulp-html-css-js-base64@0.0.1",
-  "_inBundle": false,
-  "_integrity": "sha1-ZGjqYmB4NdQc6xM/jAmPbKThxN0=",
-  "_location": "/gulp-html-css-js-base64",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "gulp-html-css-js-base64@^0.0.1",
-    "name": "gulp-html-css-js-base64",
-    "escapedName": "gulp-html-css-js-base64",
-    "rawSpec": "^0.0.1",
-    "saveSpec": null,
-    "fetchSpec": "^0.0.1"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "http://registry.npm.taobao.org/gulp-html-css-js-base64/download/gulp-html-css-js-base64-0.0.1.tgz",
-  "_shasum": "6468ea62607835d41ceb133f8c098f6ca4e1c4dd",
-  "_spec": "gulp-html-css-js-base64@^0.0.1",
-  "_where": "D:\\workspace\\play\\play_pc",
-  "author": {
-    "name": "web_jim",
-    "email": "192389590@qq.com"
-  },
-  "bugs": {
-    "url": "https://github.com/web_jim/gulp-html-css-js-base64/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "through2": "x"
-  },
-  "deprecated": false,
-  "description": "replace images link to base64",
-  "engines": {
-    "node": ">= 0.9"
-  },
-  "homepage": "https://github.com/web_jim/gulp-html-css-js-base64",
-  "keywords": [
-    "gulpplugin"
-  ],
-  "license": "MIT",
-  "main": "index.js",
   "name": "gulp-html-css-js-base64",
+  "version": "0.0.4",
+  "description": "将CSS文件中的图片url转为base64,自己配置正则表达式，将html、js等其他格式文件中的图片转为base64.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/web_jim/gulp-html-css-js-base64.git"
+    "url": "git+https://github.com/JimMyLibs/gulp-html-css-js-base64.git"
   },
-  "version": "0.0.1"
+  "keywords": [
+    "gulp4",
+    "gulp",
+    "html",
+    "css",
+    "js",
+    "base64",
+    "image",
+    "img",
+    "pic"
+  ],
+  "author": {
+    "name": "web525",
+    "email": "192389590@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimMyLibs/gulp-html-css-js-base64/issues"
+  },
+  "homepage": "https://github.com/JimMyLibs/gulp-html-css-js-base64#readme",
+  "devDependencies": {
+    "through2": "^3.0.0"
+  }
 }
